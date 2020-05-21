@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/open_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_float"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/unfinish" />
+
+    <TextView
+        android:id="@+id/unfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/unfinish"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/open_float"
+        app:layout_constraintBottom_toBottomOf="@id/open_float"
+        app:layout_constraintLeft_toRightOf="@id/open_float" />
+
+    <com.hoshizora.lbs.EditTextWithDel
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input"
+        app:layout_constraintTop_toBottomOf="@id/open_float"
+        app:layout_constraintBottom_toTopOf="@id/function" />
+
+    <com.hoshizora.lbs.WaveButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:background="@color/light_green_1"
+        app:layout_constraintTop_toBottomOf="@id/search_text"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/function"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:shadowColor="@color/grey"
+        android:shadowDx="10.0"
+        android:shadowDy="10.0"
+        android:shadowRadius="3.0"
+        app:layout_constraintTop_toBottomOf="@id/search_button"
+        app:layout_constraintBottom_toTopOf="@id/warn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warn"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/function"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:drawableBottom="@drawable/warn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

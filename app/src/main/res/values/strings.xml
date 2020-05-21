@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">李博士截图管理器</string>
+    <string name="function">一种更加简洁的使用李博士语录的方式</string>
+    <string name="open_float">开启悬浮窗</string>
+    <string name="warn">⚠️警告：</string>
+    <string name="unfinish">（此功能尚未实现，敬请期待）</string>
+    <string name="input">请在此输入</string>
+    <string name="search">查 询</string>
+</resources>
